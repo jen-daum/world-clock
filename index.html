@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
 
     <link rel="stylesheet" href="src/styles.css" />
     <title>World Clocks</title>
@@ -29,7 +31,7 @@
         <option value="3">Porto</option>
       </select>
 
-      <div class="card city-card">
+      <div id="marseille" class="card city-card">
         <div class="d-flex justify-content-between">
           <div class="col-auto">
             <h2>Marseille</h2>
@@ -40,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="card city-card">
+      <div id="london" class="card city-card">
         <div class="d-flex justify-content-between">
           <div class="col-auto">
             <h2>London</h2>
