@@ -9,11 +9,18 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="src/styles.css" />
     <title>World Clocks</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container shadow p-3 mb-5 bg-white rounded mx-auto mt-5">
       <h1>World Clock Project</h1>
       <select class="form-select" aria-label="Default select example">
         <option selected>Select a city..</option>
@@ -23,14 +30,26 @@
       </select>
 
       <div class="card city-card">
-        <h2>Marseille</h2>
-        <div class="date">June 28th 2023</div>
-        <div class="time">10:24:20 AM</div>
+        <div class="d-flex justify-content-between">
+          <div class="col-auto">
+            <h2>Marseille</h2>
+            <div class="date">June 28th 2023</div>
+          </div>
+          <div class="col-auto time">
+            10:24:20 <span class="meridiem">AM</span>
+          </div>
+        </div>
       </div>
       <div class="card city-card">
-        <h2>London</h2>
-        <div class="date">June 28th 2023</div>
-        <div class="time">09:24:20 AM</div>
+        <div class="d-flex justify-content-between">
+          <div class="col-auto">
+            <h2>London</h2>
+            <div class="date">June 28th 2023</div>
+          </div>
+          <div class="col-auto time">
+            9:24:20 <span class="meridiem">AM</span>
+          </div>
+        </div>
       </div>
     </div>
     <footer>

@@ -5,14 +5,65 @@ a:visited {
   text-decoration: none;
 }
 
+body {
+  background: #4cb8c4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3cd3ad,
+    #4cb8c4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3cd3ad,
+    #4cb8c4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Roboto Slab", serif;
+}
 h1 {
+  margin: 30px auto 50px;
   text-align: center;
+  font-weight: 800;
+}
+h2 {
+  margin: 0;
 }
 
 footer {
   text-align: center;
 }
 
+.city-card {
+  margin: 10px auto;
+  padding: 5px 0 15px;
+  border-color: transparent;
+  border-bottom: 1px dashed lightblue;
+}
+
+.city-card:last-child {
+  border-bottom: none;
+}
+.container {
+  max-width: 600px;
+}
+
+.col-auto.time {
+  align-self: center;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.date {
+  font-size: small;
+  color: darkgray;
+}
+.form-select {
+  margin-bottom: 20px;
+}
+.meridiem {
+  font-size: 12px;
+  vertical-align: middle;
+}
 #github-logo {
   width: 20px;
   height: auto;
