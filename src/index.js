@@ -1,6 +1,9 @@
 let selectedCities = [];
 
 function updateCard(timezone) {
+  if (timezone === "current") {
+    timezone = moment.tz.guess();
+  }
   let cityName = timezone.replace("_", " ").split("/")[1];
   let cardDate = moment().tz(timezone).format("dddd Do MMM");
   let cardTime = moment().tz(timezone).format("h:mm:ss");
