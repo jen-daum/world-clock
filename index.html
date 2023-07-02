@@ -25,34 +25,15 @@
     <div class="container shadow p-3 mb-5 bg-white rounded mx-auto mt-5">
       <h1>World Clock Project</h1>
       <select class="form-select" aria-label="Default select example">
-        <option selected>Select a city..</option>
-        <option value="1">Paris</option>
-        <option value="2">Marseille</option>
-        <option value="3">Porto</option>
+        <option value="" selected>Select a city..</option>
+        <option value="Europe/Paris">Paris</option>
+        <option value="Europe/London">London</option>
+        <option value="Europe/Madrid">Madrid</option>
+        <option value="Antarctica/Vostok">Vostok</option>
+        <option value="Europe/Athens">Athens</option>
       </select>
 
-      <div id="marseille" class="card city-card">
-        <div class="d-flex justify-content-between">
-          <div class="col-auto">
-            <h2>Marseille</h2>
-            <div class="date">June 28th 2023</div>
-          </div>
-          <div class="col-auto time">
-            10:24:20 <span class="meridiem">AM</span>
-          </div>
-        </div>
-      </div>
-      <div id="london" class="card city-card">
-        <div class="d-flex justify-content-between">
-          <div class="col-auto">
-            <h2>London</h2>
-            <div class="date">June 28th 2023</div>
-          </div>
-          <div class="col-auto time">
-            9:24:20 <span class="meridiem">AM</span>
-          </div>
-        </div>
-      </div>
+      <div id="cities"></div>
     </div>
     <footer>
       <span class="code-by">Coded by Jennifer DAUM ♡ </span>

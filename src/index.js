@@ -1,24 +1,40 @@
-function updateCard(id, timezone) {
-  let cardId = document.querySelector(`#${id}`);
-  let cardCity = cardId.querySelector("h2").textContent;
+let selectedCities = [];
+
+function updateCard(timezone) {
+  let cityName = timezone.replace("_", " ").split("/")[1];
   let cardDate = moment().tz(timezone).format("dddd Do MMM");
   let cardTime = moment().tz(timezone).format("h:mm:ss");
   let cardMeridiem = moment().tz(timezone).format("A");
 
-  cardId.innerHTML = `
-        <div class="d-flex justify-content-between">
-          <div class="col-auto">
-            <h2>${cardCity}</h2>
-            <div class="date">${cardDate}</div>
-          </div>
-          <div class="col-auto time">
-            ${cardTime} <span class="meridiem">${cardMeridiem}</span>
-          </div>
+  let cardId = document.querySelector("#cities");
+
+  // Check if the city already exists in the selectedCities array
+  if (!selectedCities.includes(cityName)) {
+    cardId.innerHTML += `
+      <div class="city-card d-flex justify-content-between">
+        <div class="col-auto">
+          <h2>${cityName}</h2>
+          <div class="date">${cardDate}</div>
         </div>
-      `;
+        <div class="col-auto time">
+          <span class="card-time">${cardTime}</span> <span class="meridiem">${cardMeridiem}</span>
+        </div>
+      </div>
+    `;
+
+    selectedCities.push(cityName);
+  }
 }
 
-updateCard("marseille", "Europe/Paris");
-updateCard("london", "Europe/London");
-setInterval(updateCard, 1000, "marseille", "Europe/Paris");
-setInterval(updateCard, 1000, "london", "Europe/London");
+function addCity(event) {
+  let timezone = event.target.value;
+  updateCard(timezone);
+  event.target.selectedIndex = 0; //reselect the first choice in the select form once done.
+}
+
+let cities = document.querySelector(".form-select");
+cities.addEventListener("change", addCity);
+
+//removed the setInterval for now has it would be looping forever.
+/* setInterval(updateCard, 1000, "Europe/Paris");
+setInterval(updateCard, 1000, "Europe/London"); */
