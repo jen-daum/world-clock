@@ -33,6 +33,10 @@ footer {
   text-align: center;
 }
 
+#backHomeLink {
+  display: none; /* initial state */
+  font-size: 12px;
+}
 .city-card {
   margin: 10px auto;
   padding: 5px 0 15px;
